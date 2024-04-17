@@ -25,7 +25,7 @@ services:
       - DATABASE_URL=postgresql://postgres:typebot@typebot-db:5432/typebot # Se voce mudou a senha ou o nome do banco mude esta linha seguindo este padrao DATABASE_URL=postgresql://postgres:Senha@typebot-db:5432/Nome do Banco de Dados NÃO USE ESPACOS
       - NEXTAUTH_URL=https://painelconstrutor.seudominio.com # Troque pelo seu dominio ou subdominio
       - NEXT_PUBLIC_VIEWER_URL=https://chat.seudominio.com # Troque pelo seu dominio ou subdominio
-      - ENCRYPTION_SECRET=K+Bar660Ofaec7v1jHC25tAn3l2b7c81
+      - ENCRYPTION_SECRET=4af6437f-2fec-45cb-8fc4-568980ee2775
       - ADMIN_EMAIL=aula@seudominio.com # Troque pelo seu email
       - DISABLE_SIGNUP=false # Mude Para false caso queira permitir que outras pessoas criem contas é nescessario estar como false no primeiro login do administrador
       - SMTP_AUTH_DISABLED=false
@@ -54,7 +54,7 @@ services:
       - DATABASE_URL=postgresql://postgres:typebot@typebot-db:5432/typebot # Se voce mudou a senha ou o nome do banco mude esta linha seguindo este padrao DATABASE_URL=postgresql://postgres:Senha@typebot-db:5432/Nome do Banco de Dados NÃO USE ESPACOS
       - NEXTAUTH_URL=https://painelconstrutor.seudominio.com # Troque pelo seu dominio ou subdominio
       - NEXT_PUBLIC_VIEWER_URL=https://chat.seudominio.com # Troque pelo seu dominio ou subdominio
-      - ENCRYPTION_SECRET=K+Bar660Ofaec7v1jHC25tAn3l2b7c81
+      - ENCRYPTION_SECRET=4af6437f-2fec-45cb-8fc4-568980ee2775
       - SMTP_HOST=seu.smtp.com # Troque pelo seu SMTP USE SOMENTE DOMINIO PROPRIETARIOS
       - NEXT_PUBLIC_SMTP_FROM=aula@seudominio.com # Troque pelo seu email
       - S3_ACCESS_KEY=minio # Troque se necessario - Deve ser Igual ao Declarado no Typebot Builder S3_ACCESS_KEY=
