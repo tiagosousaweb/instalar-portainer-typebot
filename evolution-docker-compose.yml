@@ -4,7 +4,7 @@ x-variables:
   &variables
     # Server configs
     SERVER_TYPE: "https"
-    SERVER_URL: https://evolutionapi.meusite.com
+    SERVER_URL: https://evolutionapi.seusite.com
     CONFIG_SESSION_PHONE_CLIENT: "RENAME ME WITH YOUR COMPANY NAME"
     # ApiKey Config for authentication High Encryption AES 256 from https://acte.ltd/utils/randomkeygen
     AUTHENTICATION_TYPE: "apikey"
@@ -48,7 +48,7 @@ services:
         traefik.enable: "true"
         traefik.http.routers.evolution.service: "evolution"
         traefik.http.services.evolution.loadbalancer.server.port: 8080
-        traefik.http.routers.evolution.rule: "Host(`evolutionapi.meusite.com`)"
+        traefik.http.routers.evolution.rule: "Host(`evolutionapi.seusite.com`)"
         traefik.http.routers.evolution.tls.certresolver: "le" # Some users uses letsencrypt as a resolver name, check your Traefik stack
         traefik.http.routers.evolution.entrypoints: "websecure" # Some users uses https as a router name, check your Traefik stack
         traefik.http.routers.evolution.tls: "true"
