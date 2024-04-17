@@ -1,7 +1,7 @@
 # Do que você precisa:
 
 - Contratar uma VPS
-- Colocar os registro do tipo CNAME apontando para o IP da VPS:
+- Adicionar registros do tipo A no seu domínio apontando para o IP da VPS:
 chat
 edge
 evolutionapi
