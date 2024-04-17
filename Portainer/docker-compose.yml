@@ -31,7 +31,7 @@ services:
       - "traefik.http.routers.traefik-dashboard.entrypoints=websecure"
       - "traefik.http.routers.traefik-dashboard.service=api@internal"
       - "traefik.http.routers.traefik-dashboard.tls.certresolver=leresolver"
-      - "traefik.http.middlewares.traefik-auth.basicauth.users=usuario:$$2y$$05$$dH5Pb01Ci1XenUfOhqH0GOxs3YtxVyiIi19FRTud8IynYyXgfbKo2" #Coloque a Senha do Traefik Aqui Nao Remova As Aspas/ Colocar $$ ao invés de $ / Criar usando o comando htpasswd -nbB usuario senha
+      - "traefik.http.middlewares.traefik-auth.basicauth.users=SENHA_TRAEFIK_AQUI" #Coloque a Senha do Traefik Aqui Nao Remova As Aspas/ Colocar $$ ao invés de $ / Criar usando o comando htpasswd -nbB usuario senha
       - "traefik.http.routers.traefik-dashboard.middlewares=traefik-auth"
 
   portainer:

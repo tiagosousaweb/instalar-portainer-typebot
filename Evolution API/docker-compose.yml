@@ -8,10 +8,10 @@ x-variables:
     CONFIG_SESSION_PHONE_CLIENT: "RENAME ME WITH YOUR COMPANY NAME"
     # ApiKey Config for authentication High Encryption AES 256 from https://acte.ltd/utils/randomkeygen
     AUTHENTICATION_TYPE: "apikey"
-    AUTHENTICATION_API_KEY: "881bf53a-71ce-40d3-9de2-0cbcf4313ebf"
+    AUTHENTICATION_API_KEY: "AUTHENTICATION_API_KEY_AQUI"
     # Database 
     DATABASE_ENABLED: "true" 
-    DATABASE_CONNECTION_URI: "mongodb://root:3ba5169f-d14b-4668-8f17-ce53088999d7@mongodb:27017/?authSource=admin&readPreference=primary&ssl=false&directConnection=true"
+    DATABASE_CONNECTION_URI: "mongodb://root:SENHA_MONGO_AQUI@mongodb:27017/?authSource=admin&readPreference=primary&ssl=false&directConnection=true"
     DATABASE_CONNECTION_DB_PREFIX_NAME: "evdocker"
     # Choose the data you want to save in the application's database or store
     DATABASE_SAVE_DATA_INSTANCE: "true"
@@ -60,7 +60,7 @@ services:
     #   - 27017:27017
     environment:
       - MONGO_INITDB_ROOT_USERNAME: "root"
-      - MONGO_INITDB_ROOT_PASSWORD: "3ba5169f-d14b-4668-8f17-ce53088999d7"
+      - MONGO_INITDB_ROOT_PASSWORD: "SENHA_MONGO_AQUI"
       - PUID: "1000"
       - PGID: "1000"
     volumes:
@@ -75,7 +75,7 @@ services:
   #   environment:
   #     ME_CONFIG_MONGODB_SERVER: "mongodb"
   #     ME_CONFIG_MONGODB_ADMINUSERNAME: "root"
-  #     ME_CONFIG_MONGODB_ADMINPASSWORD: "3ba5169f-d14b-4668-8f17-ce53088999d7"
+  #     ME_CONFIG_MONGODB_ADMINPASSWORD: "SENHA_MONGO_AQUI"
   #     ME_CONFIG_BASICAUTH_USERNAME: "admin"
   #     ME_CONFIG_BASICAUTH_PASSWORD: "admin"
   #   ports:
