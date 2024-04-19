@@ -13,7 +13,7 @@ services:
       - --providers.docker
       - --log.level=ERROR
       - --certificatesresolvers.leresolver.acme.httpchallenge=true
-      - --certificatesresolvers.leresolver.acme.email=SEU_EMAIL_AQUI #Defina aqui seu endereço de e-mail, é para geração de certificados SSL com Let's Encrypt. 
+      - --certificatesresolvers.leresolver.acme.email=seu@email.com #Defina aqui seu endereço de e-mail, é para geração de certificados SSL com Let's Encrypt. 
       - --certificatesresolvers.leresolver.acme.storage=./acme.json
       - --certificatesresolvers.leresolver.acme.httpchallenge.entrypoint=web
     ports:
@@ -27,13 +27,11 @@ services:
       - "traefik.http.routers.http-catchall.entrypoints=web"
       - "traefik.http.routers.http-catchall.middlewares=redirect-to-https"
       - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
-      - "traefik.http.routers.traefik-dashboard.rule=Host(`traefik.seusite.com`)" #Coloque o Seu Dominio do Traefik Aqui
+      - "traefik.http.routers.traefik-dashboard.rule=Host(`traefik.seudominio.com`)" #Coloque o Seu Dominio do Traefik Aqui
       - "traefik.http.routers.traefik-dashboard.entrypoints=websecure"
       - "traefik.http.routers.traefik-dashboard.service=api@internal"
       - "traefik.http.routers.traefik-dashboard.tls.certresolver=leresolver"
-      # sudo apt-get install apache2-utils -y
-      # Depois coloque a Senha do Traefik Aqui Nao Remova As Aspas / Criar usando o comando "htpasswd -nbB usuario senha" / Colocar $$ ao invés de $
-      - "traefik.http.middlewares.traefik-auth.basicauth.users=SENHA_TRAEFIK_AQUI"
+      - "traefik.http.middlewares.traefik-auth.basicauth.users=fabricandosuaideia:$$apr1$$n63z19sx$$TtM6LFJ0pURykhF3aGLi.1" #Coloque a Senha do Traefik Aqui Nao Remova As Aspas
       - "traefik.http.routers.traefik-dashboard.middlewares=traefik-auth"
 
   portainer:
@@ -46,14 +44,14 @@ services:
     labels:
       # Frontend
       - "traefik.enable=true"
-      - "traefik.http.routers.frontend.rule=Host(`portainer.seusite.com`)" #Coloque o Seu Dominio do Portainer Aqui
+      - "traefik.http.routers.frontend.rule=Host(`portainer.seudominio.com`)" #Coloque o Seu Dominio do Portainer Aqui
       - "traefik.http.routers.frontend.entrypoints=websecure"
       - "traefik.http.services.frontend.loadbalancer.server.port=9000"
       - "traefik.http.routers.frontend.service=frontend"
       - "traefik.http.routers.frontend.tls.certresolver=leresolver"
 
       # Edge
-      - "traefik.http.routers.edge.rule=Host(`edge.seusite.com`)" #Coloque o Seu Dominio do Edge Aqui
+      - "traefik.http.routers.edge.rule=Host(`edge.seudominio.com`)" #Coloque o Seu Dominio do Edge Aqui
       - "traefik.http.routers.edge.entrypoints=websecure"
       - "traefik.http.services.edge.loadbalancer.server.port=8000"
       - "traefik.http.routers.edge.service=edge"
@@ -61,4 +59,4 @@ services:
 
 
 volumes:
-  portainer_data: 
+  portainer_data:

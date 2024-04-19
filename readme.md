@@ -26,11 +26,14 @@ Guarde essa senha
 touch acme.json  
 sudo chmod 600 acme.json  
 
+* Baixar os instaladores:  
+git clone https://github.com/tiagosousaweb/instalar-portainer-typebot-evolution.git  
 
 * Instalar o Portainer  
-git clone https://github.com/tiagosousaweb/instalar-portainer-typebot-evolution.git  
-cd instalar-portainer-typebot-evolution  
-nano portainer-docker-compose.yml  
+cd Portainer  
+nano docker-compose.yml
+
+Colocar as configurações no arquivo
 
 * Pronto! Agora só rodar  
 docker compose up -d
