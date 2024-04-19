@@ -11,8 +11,7 @@ storage
 traefik  
 typebot  
 
-* Instalar o Docker https://docs.docker.com/engine/install/ubuntu/  
-
+* Instalar o Docker nesse site https://docs.docker.com/engine/install/ubuntu/  
 docker --version  
 docker compose version  
 
