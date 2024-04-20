@@ -11,15 +11,13 @@ storage
 traefik  
 typebot  
 
-* Instalar o Docker nesse site https://docs.docker.com/engine/install/ubuntu/  
+* Instalar o Docker através desse site https://docs.docker.com/engine/install/ubuntu/  
 docker --version  
 docker compose version  
 
-* Criar uma senha  
+* Criar e guardar uma senha  
 sudo apt-get install apache2-utils -y  
 htpasswd -nbB usuario senha  
-
-Guarde essa senha
 
 * Criar o arquivo para guardar o certificado  
 touch acme.json  
